@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Search filters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg transparent-blur-navbar">
+        <a class="navbar-brand border-bottom hide-section text-white" href="#">MOHSIN ALI</a>
+        <div class="my-logo">
+            <!-- <img src="images/my-logo.png" alt=""> -->
+        </div>
+        <div class="wrapper hide-section2 ">
+            <div id="search-container">
+                <!-- yaha se sir ka code edit kiya hy mene  -->
+                <select class="py-2" id="company" onchange="handleSelectCompany()">
+                    <option class="bg-dark" value="">Select company</option>
+                </select>
+                <select class="py-2 mx-3"  id="model">
+                    <option value="">Select model</option>
+                </select>
+                <!-- <input type="search" id="search-input" placeholder="Search products name here..."> -->
+                <button class="cta" onclick="search()">
+                    <span class="hover-underline-animation"> Search</span>
+                    <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10"
+                        viewBox="0 0 46 16">
+                        <path id="Path_10" data-name="Path 10"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                            transform="translate(30)"></path>
+                    </svg>
+                </button>
+                <!-- <div class="parallax-bg"></div> -->
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <div class="wrapper hide-section">
+                    
+                    <div id="search-container">
+                        <select class="py-2 " id="company" onchange="handleSelectCompany()">
+                            <option class="bg-dark" value="">Select company</option>
+                        </select>
+                        <select class="py-2 ml-3"  id="model">
+                            <option value="">Select model</option>
+                        </select>
+                        <button class="cta" onclick="search()">
+                            <span class="hover-underline-animation"> Search</span>
+                            <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10"
+                                viewBox="0 0 46 16">
+                                <path id="Path_10" data-name="Path 10"
+                                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                    transform="translate(30)"></path>
+                            </svg>
+                        </button>
+                        <div class="parallax-bg"></div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    
+        <!-- Your content here -->
+
+        <!-- columns -->
+        <div class="container text-center my-3">
+            <div class="row justify-content-center">
+    
+                <div id="buttons">
+                    <button class="button-value">All</button>
+                    <button class="button-value">Smart Watches</button>
+                    <button class="button-value">Classic Watches</button>
+                    <button class="button-value">Special Collection</button>
+                    <button class="button-value">Featured Products</button>
+                </div>
+    
+                <!-- javaScript ki madad se data ko is div me  add honge  -->
+    
+            </div>
+        </div>
+    
+        <div class="container card-container" id="list">
+            <!-- show here js products  -->
+        </div>
+    
+    
+    <!-- footer  -->
+    
+    <section class="bg-black text-white py-3">
+        <footer class="container py-5">
+          <hr>
+          <div class="row justify-content-start bg-black py-3">
+            <div class="col-lg-4 ">
+                <ul type="none"  class="fw-semibold">
+                    <li class="active fw-bold fs-4 border-bottom pb-2 text-secondary mb-3">Questions? Contact us.</li>
+                    <li>FAQ</li>
+                    <li>Investor Relations</li>
+                    <li>Privacy</li>
+                    <li>Speed Test</li>
+                    <select class="form-select w-50 py-2 my-3 shadow-none fw-semibold bg-transparent text-white" aria-label="Default select example">
+                      <option selected class="fw-semibold ">Language's</option>
+                      <option value="1" class="fw-semibold text-dark">English</option>
+                      <option value="2" class="fw-semibold text-dark">Spanish</option>
+                      <option value="3" class="fw-semibold text-dark">Chines</option>
+                      <option value="3" class="fw-semibold text-dark">Hindi</option>
+                    </select>
+                    <li>Netflix Pakistan</li>
+                </ul>
+            </div>
+            <div class="col-lg-2 my-3">
+                <ul type="none" class="py-5 fw-semibold">
+                    <li>Help Center</li>
+                    <li>Jobs</li>
+                    <li>Cookie Preferences</li>
+                    <li>Legal Notices</li>
+                </ul>
+            </div>
+           
+            <div class="col-lg-2 my-3">
+                <ul type="none" class="py-5 fw-semibold">
+                    <li>Account</li>
+                    <li>Ways to Watch</li>
+                    <li>Corporate Information</li>
+                    <li>Only on Netflix</li>
+                </ul>
+            </div>
+           
+            <div class="col-lg-2 my-3">
+                <ul type="none" class="py-5 fw-semibold">
+                    <li>Media Center</li>
+                    <li>Terms of Use</li>
+                    <li>Contact Us</li>
+                    <li>Legal Notices</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+        </footer>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+      <script src="app.js"></script>
+  </body>
+</html>
